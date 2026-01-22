@@ -1253,18 +1253,48 @@ a:hover {
     :root {
         --space-lg: 3rem;
         --space-xl: 5rem;
+        --nav-height: 50px;
     }
     
     body {
         font-size: 1rem;
     }
     
+    /* Mobile Navigation */
+    .nav-container {
+        padding: 0 var(--space-sm);
+    }
+    
+    .nav-brand {
+        font-size: 0.9rem;
+        flex-shrink: 0;
+        white-space: nowrap;
+    }
+    
     .nav-links {
-        gap: var(--space-sm);
+        gap: 0.5rem;
+        flex-shrink: 1;
+        overflow: hidden;
+    }
+    
+    .nav-links li:nth-child(2),
+    .nav-links li:nth-child(3) {
+        display: none;
     }
     
     .nav-link {
-        font-size: 0.65rem;
+        font-size: 0.6rem;
+        letter-spacing: 0.05em;
+        padding: 0.4rem 0.6rem;
+    }
+    
+    .theme-toggle {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .theme-icon {
+        font-size: 0.9rem;
     }
     
     .content-section {
@@ -1326,6 +1356,14 @@ a:hover {
 }
 
 @media (max-width: 480px) {
+    .nav-brand {
+        font-size: 0.85rem;
+    }
+    
+    .nav-links li:first-child {
+        display: none;
+    }
+    
     .hero-title {
         font-size: 3.5rem;
     }
@@ -1336,9 +1374,5 @@ a:hover {
     
     .metaphor-object {
         font-size: 2.5rem;
-    }
-    
-    .nav-brand {
-        font-size: 1rem;
     }
 }
