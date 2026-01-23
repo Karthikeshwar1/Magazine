@@ -418,12 +418,8 @@ function initSection4() {
 // ============================================
 
 function initScrollProgress() {
-    const existingProgress = document.querySelector(".scroll-progress");
-    if (existingProgress) return;
-    
-    const progressBar = document.createElement("div");
-    progressBar.className = "scroll-progress";
-    document.body.prepend(progressBar);
+    const progressBar = document.querySelector("#progressBar") || document.querySelector(".progress-bar");
+    if (!progressBar) return;
 
     gsap.to(progressBar, {
         scrollTrigger: {
