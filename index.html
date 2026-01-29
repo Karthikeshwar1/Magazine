@@ -18,90 +18,126 @@
     <!-- Navigation -->
     <nav class="site-nav">
         <div class="nav-container">
-            <a href="index.html" class="nav-brand">Karthikeshwar</a>
+            <a href="index.html" class="nav-brand">
+                <svg class="nav-brand-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                </svg>
+                <span class="nav-brand-text">Karthikeshwar</span>
+                <span class="nav-brand-short">K</span>
+            </a>
             <ul class="nav-links">
                 <li><a href="index.html" class="nav-link active">Magazine</a></li>
-                <li><a href="https://karthikeshwar1.github.io/blog/" class="nav-link" target="_blank">Original Blog</a></li>
-                <li><a href="https://karthikeshwar1.github.io/" class="nav-link" target="_blank">Portfolio</a></li>
+                <li class="nav-external"><a href="https://karthikeshwar1.github.io/blog/" class="nav-link" target="_blank">Original Blog</a></li>
+                <li class="nav-external"><a href="https://karthikeshwar1.github.io/" class="nav-link" target="_blank">Portfolio</a></li>
                 <li>
                     <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">
-                        <span class="theme-icon theme-icon-sun">☀️</span>
-                        <span class="theme-icon theme-icon-moon">🌙</span>
+                        <svg class="theme-icon theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                        <svg class="theme-icon theme-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
                     </button>
                 </li>
             </ul>
         </div>
     </nav>
 
-    <main class="page-container">
-        <!-- Hero Section -->
-        <section class="home-hero">
-            <div class="home-hero-content">
-                <p class="home-eyebrow">Welcome to</p>
-                <h1 class="home-title">
-                    The <span class="accent">Magazine</span>
-                </h1>
-                <p class="home-subtitle">
-                    Magazine-style version of my original blog posts.
-                </p>
+    <main class="magazine-container">
+        <!-- Masthead -->
+        <header class="magazine-masthead">
+            <div class="masthead-content">
+                <div class="masthead-issue">Issue No. 01</div>
+                <h1 class="masthead-title">The Magazine</h1>
+                <p class="masthead-tagline">Visual Essays on Ideas That Matter</p>
             </div>
+            <div class="masthead-scroll-hint">
+                <span>Scroll to explore</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M12 5v14M19 12l-7 7-7-7"/>
+                </svg>
+            </div>
+        </header>
+
+        <!-- Cover Story -->
+        <section class="cover-story">
+            <div class="cover-label">
+                <span class="cover-label-line"></span>
+                <span class="cover-label-text">Cover Story</span>
+                <span class="cover-label-line"></span>
+            </div>
+            <a href="blog/2026/truth_in_myths.html" class="cover-article">
+                <div class="cover-number">01</div>
+                <div class="cover-content">
+                    <span class="cover-category">Abstract</span>
+                    <h2 class="cover-title">The Truth in Maths and Myths</h2>
+                    <p class="cover-excerpt">On abstractions, archetypes, and the meta-world where mathematics and mythology reside.</p>
+                    <span class="cover-cta">
+                        Read the Story
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </span>
+                </div>
+            </a>
         </section>
 
-        <!-- Blog Listing -->
-        <section class="blog-section">
-            <h2 class="section-title">Featured Articles</h2>
-            
-            <!-- 2026 -->
-            <div class="year-header">2026</div>
-            <div class="blog-grid">
-                <a href="blog/2026/truth_in_myths.html" class="blog-card blog-card-featured">
-                    <div class="blog-card-content">
-                        <span class="blog-card-date">2026</span>
-                        <h3 class="blog-card-title">The Truth in Maths and Myths</h3>
-                        <p class="blog-card-excerpt">
-                            On abstractions, archetypes, and the meta-world where mathematics and mythology reside.
-                        </p>
-                        <span class="blog-card-tag">Abstract</span>
-                    </div>
-                </a>
+        <!-- Table of Contents -->
+        <section class="toc-section">
+            <div class="toc-header">
+                <h2 class="toc-title">Contents</h2>
+                <div class="toc-line"></div>
             </div>
-            
-            <!-- 2025 -->
-            <div class="year-header">2025</div>
-            <div class="blog-grid">
-                <a href="blog/2025/emergence_and_meaning.html" class="blog-card">
-                    <div class="blog-card-content">
-                        <span class="blog-card-date">2025</span>
-                        <h3 class="blog-card-title">Emergence and Meaning</h3>
-                        <p class="blog-card-excerpt">
-                            On emergence, consciousness, and whether AI will destroy meaning or help us discover new meaning.
-                        </p>
-                        <span class="blog-card-tag">Consciousness</span>
+
+            <div class="toc-grid">
+                <a href="blog/2025/emergence_and_meaning.html" class="toc-item toc-item-large">
+                    <div class="toc-item-number">02</div>
+                    <div class="toc-item-content">
+                        <span class="toc-item-category">Consciousness</span>
+                        <h3 class="toc-item-title">Emergence and Meaning</h3>
+                        <p class="toc-item-excerpt">On emergence, consciousness, and whether AI will destroy meaning or help us discover new meaning.</p>
+                    </div>
+                    <div class="toc-item-arrow">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
                     </div>
                 </a>
-                <a href="blog/2025/how_humans_build.html" class="blog-card">
-                    <div class="blog-card-content">
-                        <span class="blog-card-date">2025</span>
-                        <h3 class="blog-card-title">How We The Humans Build</h3>
-                        <p class="blog-card-excerpt">
-                            On how human engineering differs from nature — submarines don't look like fish, and AI doesn't need to resemble humans.
-                        </p>
-                        <span class="blog-card-tag">Engineering</span>
+
+                <a href="blog/2025/how_humans_build.html" class="toc-item">
+                    <div class="toc-item-number">03</div>
+                    <div class="toc-item-content">
+                        <span class="toc-item-category">Engineering</span>
+                        <h3 class="toc-item-title">How We The Humans Build</h3>
+                        <p class="toc-item-excerpt">On how human engineering differs from nature.</p>
+                    </div>
+                    <div class="toc-item-arrow">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
                     </div>
                 </a>
-            </div>
-            
-            <!-- 2024 -->
-            <div class="year-header">2024</div>
-            <div class="blog-grid">
-                <a href="blog/2024/words_weigh.html" class="blog-card">
-                    <div class="blog-card-content">
-                        <span class="blog-card-date">2024</span>
-                        <h3 class="blog-card-title">Words Weigh</h3>
-                        <p class="blog-card-excerpt">
-                            On words and their value.
-                        </p>
-                        <span class="blog-card-tag">Abstract</span>
+
+                <a href="blog/2024/words_weigh.html" class="toc-item">
+                    <div class="toc-item-number">04</div>
+                    <div class="toc-item-content">
+                        <span class="toc-item-category">Abstract</span>
+                        <h3 class="toc-item-title">Words Weigh</h3>
+                        <p class="toc-item-excerpt">On words and their value.</p>
+                    </div>
+                    <div class="toc-item-arrow">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
                     </div>
                 </a>
             </div>
@@ -109,19 +145,29 @@
     </main>
 
     <!-- Footer -->
-    <footer class="site-footer">
-        <div class="footer-content">
-            <p class="footer-copyright">© 2026 Karthikeshwar</p>
+    <footer class="magazine-footer">
+        <div class="footer-accent"></div>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <span class="footer-logo">K</span>
+                <span class="footer-tagline">Visual Essays by Karthikeshwar</span>
+            </div>
+            <nav class="footer-links">
+                <a href="https://karthikeshwar1.github.io/blog/" target="_blank">Original Blog</a>
+                <a href="https://karthikeshwar1.github.io/" target="_blank">Portfolio</a>
+                <a href="mailto:karthikeshwar7087@gmail.com">Contact</a>
+            </nav>
+            <p class="footer-copyright">© 2026</p>
         </div>
-        <nav class="footer-nav">
-            <a href="https://karthikeshwar1.github.io/blog/" target="_blank">Original Blog</a>
-            <a href="https://karthikeshwar1.github.io/" target="_blank">Portfolio</a>
-            <a href="mailto:karthikeshwar7087@gmail.com">Contact</a>
-        </nav>
     </footer>
 
+    <!-- GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    
     <!-- Scripts -->
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/home-animations.js"></script>
 </body>
 </html>
 
