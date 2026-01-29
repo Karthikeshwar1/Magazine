@@ -59,68 +59,6 @@ function initMastheadAnimation() {
 }
 
 // ============================================
-// COVER STORY ANIMATIONS
-// ============================================
-
-function initCoverAnimation() {
-    const cover = document.querySelector('.cover-story');
-    if (!cover) return;
-    
-    // Cover label lines
-    gsap.from('.cover-label-line', {
-        scrollTrigger: {
-            trigger: '.cover-story',
-            start: "top 80%",
-            toggleActions: "play none none reverse"
-        },
-        scaleX: 0,
-        duration: 0.8,
-        stagger: 0.1,
-        ease: "power3.out"
-    });
-    
-    // Cover label text
-    gsap.from('.cover-label-text', {
-        scrollTrigger: {
-            trigger: '.cover-story',
-            start: "top 80%",
-            toggleActions: "play none none reverse"
-        },
-        opacity: 0,
-        duration: 0.6,
-        delay: 0.3
-    });
-    
-    // Cover article card
-    gsap.from('.cover-article', {
-        scrollTrigger: {
-            trigger: '.cover-article',
-            start: "top 85%",
-            toggleActions: "play none none reverse"
-        },
-        opacity: 0,
-        y: 40,
-        duration: 1,
-        ease: "power3.out"
-    });
-    
-    // Cover content stagger
-    gsap.from('.cover-content > *', {
-        scrollTrigger: {
-            trigger: '.cover-article',
-            start: "top 80%",
-            toggleActions: "play none none reverse"
-        },
-        opacity: 0,
-        y: 20,
-        duration: 0.8,
-        stagger: 0.1,
-        delay: 0.3,
-        ease: "power3.out"
-    });
-}
-
-// ============================================
 // TABLE OF CONTENTS ANIMATIONS
 // ============================================
 
@@ -233,7 +171,6 @@ function initNavScroll() {
 function initHomeAnimations() {
     document.fonts.ready.then(() => {
         initMastheadAnimation();
-        initCoverAnimation();
         initTocAnimation();
         initFooterAnimation();
         initNavScroll();
